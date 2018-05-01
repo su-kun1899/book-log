@@ -200,3 +200,19 @@ x = 7
 0 < x and x < 10 #True
 0 < x < 10 #書き換え可能
 ```
+
+### if文
+
+- インデントがブロックになる
+
+```py
+fruit = "banana"
+
+if fruit == "apple":
+	print("red")
+elif fruit == "banana":
+	print("yellow")
+else:
+	print("unknown")
+```
+
