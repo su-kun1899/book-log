@@ -232,3 +232,9 @@ bool('') # False
 bool([]) # False
 ```
 
+### 三項演算子
+
+```py
+a = 5
+x = 10 if a > 0 else 20 # 10
+```
