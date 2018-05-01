@@ -238,3 +238,12 @@ bool([]) # False
 a = 5
 x = 10 if a > 0 else 20 # 10
 ```
+
+### while
+
+```py
+counter = 0
+while counter < 3:
+	print(counter)
+	counter += 1
+```
