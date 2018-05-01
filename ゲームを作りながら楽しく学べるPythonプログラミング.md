@@ -247,3 +247,27 @@ while counter < 3:
 	print(counter)
 	counter += 1
 ```
+
+### for
+
+```py
+scores = (78, 95, 68, 62)
+total = 0
+for score in scores:
+   total += score
+```
+
+- indexを使いたい場合はrangeで書く
+
+```py
+for index in range(len(scores)):
+    print(str(index) + ":" + str(scores[index]))
+
+# rangeは範囲指定可能
+for index in range(3, 7):
+    print(index) # 3,4,5,6
+
+# ステップで一つおきも可能
+for index in range(1, 8, 2):
+    print(index) # 1,3,5,7
+```
