@@ -271,3 +271,7 @@ for index in range(3, 7):
 for index in range(1, 8, 2):
     print(index) # 1,3,5,7
 ```
+
+### breakとcontinue
+
+- forやwhileではbreakとcontinueが使える
