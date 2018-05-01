@@ -216,3 +216,19 @@ else:
 	print("unknown")
 ```
 
+### ブール値以外の値
+
+- bool関数で調べられる
+  - 数値
+    - ゼロ以外True
+  - 文字列
+    - 空文字はFalse
+  - リスト・タプル
+    - 空リスト・空タプルはFalse
+
+```py
+bool(0.0) # False
+bool('') # False
+bool([]) # False
+```
+
