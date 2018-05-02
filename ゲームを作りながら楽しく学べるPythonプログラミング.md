@@ -275,3 +275,21 @@ for index in range(1, 8, 2):
 ### breakとcontinue
 
 - forやwhileではbreakとcontinueが使える
+
+### 関数
+
+- 戻り値が不要な場合、returnは省略可能
+- 引数や戻り値はどんな型でも使用可能
+
+```py
+def add(a, b):
+    return a + b
+```
+
+- 引数にはデフォルト値を指定可能
+
+```py
+def say_hello(name = "Alex"):
+    print("Hi!" + name)
+```
+
