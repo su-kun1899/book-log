@@ -293,3 +293,40 @@ def say_hello(name = "Alex"):
     print("Hi!" + name)
 ```
 
+### ラムダ関数
+
+- `lambda 引数: 命令`
+
+```py
+is_even = lambda x: x % 2 == 0
+is_even(2) # True
+is_even(3) # False
+```
+#### map
+
+- map関数は要素に対して渡された関数を適用する
+- `map(処理を行う関数, リストやタプル)`
+- 引数の関数にラムダを使える
+
+```py
+list(map(lambda x: x * 2, [1, 2, 3])) # [2, 4, 6]
+```
+
+#### filter
+
+- `filter(要素を選ぶ関数, 配列)`
+
+```py
+list(filter(lambda a: a % 2 == 0, [0, 1, 2, 3, 4, 5])) # [0, 2, 4]
+```
+
+#### sorted
+
+- `reverse=True` パラメータを渡すと逆順になる
+- 独自ソートを定義する場合、keyパラメータに関数を渡す
+
+```py
+sorted([7,4,3,1,5], reverse=True)
+sorted(["bread","rice","spagetti"], key=lambda x: len(x)) # ['rice', 'bread', 'spagetti']
+sorted(["bread","rice","spagetti"], key=lambda x: len(x), reverse=True) # ['spagetti', 'bread', 'rice']
+```
