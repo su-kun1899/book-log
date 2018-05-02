@@ -330,3 +330,18 @@ sorted([7,4,3,1,5], reverse=True)
 sorted(["bread","rice","spagetti"], key=lambda x: len(x)) # ['rice', 'bread', 'spagetti']
 sorted(["bread","rice","spagetti"], key=lambda x: len(x), reverse=True) # ['spagetti', 'bread', 'rice']
 ```
+
+### リスト内包表記
+
+- リストに対しての処理を内包して表記可能
+- `[式 for 要素名 in list]`
+
+```py
+[x * 2 for x in [1,2,3,4]] #[2, 4, 6, 8]
+```
+- 条件式を追加すると、条件を満たした要素のみ式が実行される
+
+```py
+[x for x in [0, 1, 2, 3, 4, 5] if x % 2 == 0] # [0, 2, 4]
+[x * 3 for x in range(6) if x % 2 == 0] # [0, 6, 12]
+```
