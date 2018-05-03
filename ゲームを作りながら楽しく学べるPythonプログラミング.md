@@ -388,3 +388,10 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+### __pycache__
+
+- 自前のpythonモジュールをimportすると自動的に__pycache__というディレクトリが作成される
+  - 配下に.pycファイルが作成される
+- コンパイルした結果のバイトコードのキャッシュ
+- 💡 gitignoreに入れておこう
