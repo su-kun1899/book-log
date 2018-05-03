@@ -346,7 +346,7 @@ sorted(["bread","rice","spagetti"], key=lambda x: len(x), reverse=True) # ['spag
 [x * 3 for x in range(6) if x % 2 == 0] # [0, 6, 12]
 ```
 
-## モジュール
+### モジュール
 
 - `import モジュール名`
 - 乱数を使用するrandomモジュールをimportする
@@ -368,4 +368,23 @@ print("start")
 for index in range(5):
     print(randint(0, 5))
 print("done")
+```
+
+### __main__
+
+- Pythonモジュールはimportする可能性もされる可能性もある
+- プログラムを開始したファイルである場合、`__name__` 変数に `__main__` という値が格納される
+  - importされている場合、モジュール名が格納される
+- 💡 エントリポイント用に処理を入れておくと良さそう
+
+```py
+import ...
+初期化コード
+    関数・クラス定義、広域変数宣言など
+
+def main():
+    ...メインルーチン
+
+if __name__ == '__main__':
+    main()
 ```
