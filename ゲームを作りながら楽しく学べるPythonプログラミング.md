@@ -345,3 +345,27 @@ sorted(["bread","rice","spagetti"], key=lambda x: len(x), reverse=True) # ['spag
 [x for x in [0, 1, 2, 3, 4, 5] if x % 2 == 0] # [0, 2, 4]
 [x * 3 for x in range(6) if x % 2 == 0] # [0, 6, 12]
 ```
+
+## モジュール
+
+- `import モジュール名`
+- 乱数を使用するrandomモジュールをimportする
+
+```py
+import random
+print("start")
+for index in range(5):
+  print(random.randint(0, 5))
+print("done")
+```
+
+- 特定の関数のみimportする
+  - `from モジュール名 import 関数名`
+
+```py
+from random import randint
+print("start")
+for index in range(5):
+    print(randint(0, 5))
+print("done")
+```
