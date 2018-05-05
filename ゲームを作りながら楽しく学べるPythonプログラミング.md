@@ -431,4 +431,3 @@ $ pip3 install pygame
 ### Rect
 
 - 矩形（位置とサイズ）を指定する時に使うクラス
-
