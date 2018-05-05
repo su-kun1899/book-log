@@ -413,3 +413,12 @@ $ pip3 install pygame
 - メインループはCPU使用率が高い
 - フレームを描画するたびに休憩をとるのが一般的
 - pygameはクロックオブジェクトがある
+
+### ドキュメント
+
+- 公式
+  - http://www.pygame.org/docs/
+- 翻訳
+  - http://westplain.sakuraweb.com/translate/pygame/
+
+
