@@ -421,4 +421,14 @@ $ pip3 install pygame
 - 翻訳
   - http://westplain.sakuraweb.com/translate/pygame/
 
+### 座標
+
+- 横がX軸
+  - 右が正
+- 縦がY軸
+  - 下が正
+
+### Rect
+
+- 矩形（位置とサイズ）を指定する時に使うクラス
 
