@@ -1,0 +1,65 @@
+# 入門Ansible
+
+- 構成管理ツール
+- sshだけがあればいい
+- inventoryファイルだけがあればいい
+  - 実際にはplaybookも使う
+- inventoryファイル
+  - ホストの情報を書く
+- playbook
+  - varsで変数を宣言
+    - 入れ子にできる
+    - vars_filesを使えば別ファイルから読み込める
+  - task
+    - sudo(become)はtaskごとにも指定できる
+  - handler
+    - taskのnotifyにhandlerのnameを指定
+    - taskに変更があった場合だけhanlerが実行される
+    - serviceの再起動等に使える
+    - notifyで複数のhandlerを起動することも可能
+- よく使うモジュール
+  - script
+    - シェルスクリプトが実行できる
+    - createsでファイル有無による実行制御ができる
+  - command
+    - コマンドを対象ホストで実行する
+    - chdir引数で作業場所を変更できる
+    - リダイレクトやパイプは使えない
+  - shell
+    - リダイレクトやパイプが使える
+  - file
+    - ファイルやディレクトリの作成
+    - ownerやgroupの変更
+    - シンボリックリンクの作成
+  - copy
+    - 管理ホストのファイルを対象ホストにコピーする
+  - fetch
+    - 対象ホストから管理ホスト側にファイルを送る
+    - ログの収集に使える？
+  - template
+    - jinja2を使う
+    - テンプレートの変数を展開して、対象ホストでファイルを作成する
+  - get_url
+    - URLからファイルをダウンロードする
+    - destをファイルにすると、既にファイルがあるとダウンロードしない
+      - 冪等性を考えるならこちらの方がよいかも
+  - lineinfile
+    - ファイルの中の任意の一行を設定・削除する
+    - regexpで対象行を指定する
+      - 指定がなければ末尾に追記
+  - replace
+    - 複数行をまとめて置換したい場合はこちら
+  - unarchive
+    - 管理ホストにある圧縮ファイルを対象ホストに転送して解凍する
+  - yum
+    - yumコマンドを使ってパッケージをインストールする
+  - service
+    - serviceコマンドを使える
+    - sleepで停止起動のインターバルを指定できる
+    - enabled=yesでホスト起動時にサービスが起動するようにできる
+  - user
+    - ユーザーを追加・削除する
+    - passwordはハッシュ化して指定する
+      - mkpasswdが使えれば `mkpasswd --method=SHA-512`
+      - pipで `passlib` を使ってもいい
+        - `python -c "from passlib.hash import sha512_crypt; print (sha512_crypt.encrypt('hogehoge'))"`
