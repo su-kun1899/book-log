@@ -78,3 +78,31 @@
 - debug
   - 任意の内容を表示する
   - 変数の確認などに使える
+  - `stdout.find()` を使うと文字列が含まれているか調べられる
+
+## 複雑な処理
+
+- 繰り返し
+  - with_items
+  - 入れ子ループ
+    - with_nested
+    - ただし１階層
+  - key-valueのマッピングをループ
+    - with_dict
+  - 管理ホスト側のファイルをループ
+    - with_fileglob
+    - ファイルがない場合スキップされる（エラーも出ない）
+- 出力を使い回す
+  - register
+  - モジュールの出力を保存しておける
+  - debugで中身を確認しながら使うと良い
+- 条件付き実行
+  - when
+  - is definedで変数が定義されているかどうかチェックできる
+  - andやorも指定可能
+  - registerとの連携も可能
+    - failed
+    - success
+    - skipped
+    - changed
+
