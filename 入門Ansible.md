@@ -134,3 +134,24 @@
 - 非同期でtaskを実行する
   - async
 
+## 大規模なplaybook
+
+- 他のplaybookを読み込む
+  - include
+- taskファイルは分割可能
+  - 変数を渡すこともできる
+- 推奨ディレクトリ構成がある
+- role
+  - 再利用する一連のtask
+  - roleの推奨ディレクトリ構造もある
+  - tasksだけあればよい
+  - 変数名のprefixにrole名をつけてあげると衝突が避けやすい
+- 並列実行
+  - fork
+- 順々に実行
+  - serial
+- ホストのリストを動的に作成
+  - dynamic inventory
+  - AWS の EC2 hostリストを取得できる
+  - inventory ファイルにディレクトリを指定するとすべてのファイルを inventory ファイルとして扱う
+    - 静的なファイルと動的なファイルの共存が可能になる
