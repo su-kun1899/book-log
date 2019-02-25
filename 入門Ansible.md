@@ -105,4 +105,32 @@
     - success
     - skipped
     - changed
+- 成功するまで繰り返す
+  - until
+- 外部情報の参照
+  - lookup
+  - プラグインを使って値を取り出せる
+    - 環境変数、redis、file
+    - 実行は管理ホスト側
+- 変数を処理する
+  - filter
+- キーボードから入力する
+  - vars_prompt
+- 管理ホストで実行する
+  - local_action
+  - 事前に送信ファイルを圧縮したりとか
+- 実行するモジュールを変数で変更する
+  - action
+  - あまり使わないかも
+- 環境変数を設定する
+  - environment
+- 失敗しても無視する
+  - ignore_errors
+  - 終了コードで動作を変えられる
+  - 失敗条件を定義
+    - failed_when
+  - 変更条件を定義
+    - changed_when
+- 非同期でtaskを実行する
+  - async
 
