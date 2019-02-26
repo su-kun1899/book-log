@@ -155,3 +155,35 @@
   - AWS の EC2 hostリストを取得できる
   - inventory ファイルにディレクトリを指定するとすべてのファイルを inventory ファイルとして扱う
     - 静的なファイルと動的なファイルの共存が可能になる
+
+## コマンドラインオプション
+
+- ssh認証
+  - ユーザとかパスワードとか
+- 対象ホストを制限
+  - limit
+- 実行するタスクを制限
+  - tags
+- dry-run
+  - check
+- taskを確認しながら実行
+  - step
+- 差分表示
+  - diff
+
+## 変数ファイルの暗号化
+
+- ansible-vault
+- 暗号化ファイルを作成
+  - create
+- 既にあるファイルを暗号化
+  - encrypt
+- 復号化
+  - decrypt
+- 編集
+  - edit
+- パスワードの変更
+  - rekey
+- 使い方
+  - vars_files に設定
+  - ask-vault-pass オプションか vault-password-file オプションを使う
