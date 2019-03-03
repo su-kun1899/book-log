@@ -187,3 +187,41 @@
 - 使い方
   - vars_files に設定
   - ask-vault-pass オプションか vault-password-file オプションを使う
+
+## よくあるご質問
+
+- 一つの playbook が複雑になってしまった
+  - role に分割していく
+
+## モジュールを自作する
+
+- 既存のモジュールの組み合わせでできるなら作成しないほうがよい
+
+## plugin を自作する
+
+- Ansibleの動作を拡張できる
+- lookup plugin
+  - 変数を動的に設定する
+  - 環境変数や redis から取得した値を変数に格納する
+- filter pluguin
+  - Jinja2 で使う filter を拡張する
+  - base64 encode/decode
+  - failed, success, changed に必ずする
+    - テストで有用
+  - 正規表現
+  - ファイルパス
+  - ランダムな数字
+- callback plugin
+  - playbook 開始時、task 終了時、エラー発生時の callback を設定できる
+  - 標準で提供されているものはない
+  - チャットやメールに通知するサンプルがある
+- action plugin
+  - モジュールと組み合わせて使う
+  - 管理ホスト側でモジュール実行の前準備をさせる
+- connection type plugin
+  - 操作対象に対して接続する
+  - 自作することはほぼない
+- vars plugin
+  - group_vars や host_vars の変数を設定する
+  - 自作が非推奨
+  - inventory スクリプトで変数を扱う方が容易
